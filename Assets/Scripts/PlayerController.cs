@@ -6,28 +6,37 @@ using UnityStandardAssets.CrossPlatformInput;
 
 
 
-public class Player : MonoBehaviour {
-
+public class PlayerController : MonoBehaviour {
+    [Header("General")]
     [Tooltip("In ms^-1")] [SerializeField] float Speed = 4f;
 #pragma warning disable IDE0044 // Add readonly modifier
     [Tooltip("In ms^-1")] [SerializeField] float xRange = 5f;
 #pragma warning restore IDE0044 // Add readonly modifier
     [Tooltip("In ms^-1")] [SerializeField] float yRange = 3f;
+
+    [Header("Screen Position Based")]
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float controlPitchFactor = -20f;
+
+    [Header("Control-throw based")]
     [SerializeField] float positionYawFactor = 5f;
     [SerializeField] float controlRollFactor = -20f;
     float xThrow, yThrow;
+    bool isControlEnabled = true;
     // Use this for initialization
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+
+    void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
     }
 
     private void ProcessRotation()
@@ -53,5 +62,14 @@ public class Player : MonoBehaviour {
         float rawYPos = transform.localPosition.y + yOffset;
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    void OnPlayerDeath()
+    {
+        isControlEnabled = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("We hit something!");
     }
 }
