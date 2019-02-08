@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 198456487808402426}
   - component: {fileID: 199315084344402428}
   m_Layer: 0
-  m_Name: Bullets
+  m_Name: Bullets left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 198828592376512316}
   - component: {fileID: 199379109549383548}
   m_Layer: 0
-  m_Name: Bullets (1)
+  m_Name: Bullets Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1927768398617732}
-  m_LocalRotation: {x: 0.23758465, y: 0.25796425, z: 0.047067437, w: 0.9353035}
+  m_LocalRotation: {x: 0.2184811, y: 0.8727845, z: -0.019216456, w: 0.4360551}
   m_LocalPosition: {x: 0, y: 0.95, z: 6.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -112,20 +112,20 @@ Transform:
   - {fileID: 4436109740651508}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 24.844002, y: 33.808002, z: 13.4210005}
+  m_LocalEulerAnglesHint: {x: 12.949, y: 129.429, z: 21.970001}
 --- !u!4 &4424172213017496
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517458908574204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.115802504, y: -0.10106985, z: -0.5560259, w: 0.8168292}
   m_LocalPosition: {x: 0.95, y: -0.02, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4276583313832826}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -17.552, y: -2.184, z: -68.15}
 --- !u!4 &4436109740651508
 Transform:
   m_ObjectHideFlags: 1
@@ -2726,9 +2726,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -3739,7 +3739,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -987526601
+  randomSeed: 129589087
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6087,9 +6087,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -6233,7 +6233,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -7100,7 +7100,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 235375537
+  randomSeed: -153524221
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9448,9 +9448,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4656881606067338}
   - component: {fileID: 33368809925384970}
   - component: {fileID: 23853548336113804}
-  - component: {fileID: 65451727493754554}
+  - component: {fileID: 114597747494569364}
   m_Layer: 0
   m_Name: SF_Free-Fighter 1
   m_TagString: Untagged
@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005872707508974}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 186.3, y: 23.367905, z: 532.4}
+  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 515.1734, y: -13.939133, z: 92.90991}
   m_LocalScale: {x: 2.205061, y: 2.205062, z: 2.205062}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,15 +83,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005872707508974}
   m_Mesh: {fileID: 4300000, guid: a2b9f16335cfda74081507453d1466ee, type: 3}
---- !u!65 &65451727493754554
-BoxCollider:
+--- !u!114 &114597747494569364
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005872707508974}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 15.435203, y: 7.477126, z: 19.8232}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67b8621e32b38741ad48941efa9866d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathFX: {fileID: 1539704658612570, guid: 9408bb854c7bc454c8d4ef2aca93eb12, type: 2}
