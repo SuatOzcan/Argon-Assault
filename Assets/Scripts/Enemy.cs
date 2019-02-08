@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	void Start () {
+    [SerializeField] GameObject deathFX;
+    [SerializeField] Transform parent;
+
+    void Start () {
         AddNonTriggerBoxCollider();
 	}
 
@@ -18,6 +21,8 @@ public class Enemy : MonoBehaviour {
     void OnParticleCollision(GameObject other)
     {
         print("Particles collided with enemy " + gameObject.name);
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parent;
         Destroy(gameObject);
     }
 }
