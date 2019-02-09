@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour {
 #pragma warning restore IDE0044 // Add readonly modifier
     [Tooltip("In ms^-1")] [SerializeField] float yRange = 3f;
 
+    [SerializeField] GameObject[] guns;
+
     [Header("Screen Position Based")]
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float controlPitchFactor = -20f;
@@ -36,9 +38,10 @@ public class PlayerController : MonoBehaviour {
         {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
     }
-
+ 
     private void ProcessRotation()
     {
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
@@ -64,6 +67,34 @@ public class PlayerController : MonoBehaviour {
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
 
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DisActivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DisActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
+    }   
+
     void OnPlayerDeath()
     {
         isControlEnabled = false;
@@ -72,4 +103,6 @@ public class PlayerController : MonoBehaviour {
     {
         print("We hit something!");
     }
+
+
 }

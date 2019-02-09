@@ -1,0 +1,29 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ScoreBoard : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+        scoreText = GetComponent<Text>();
+        scoreText.text = score.ToString();
+    }
+
+    int score;
+    Text scoreText;
+
+    public void ScoreHit(int scoreIncrease)
+<<<<<<< HEAD
+    {
+||||||| parent of 395c5a4... Change B.
+    {   //Change A.
+=======
+    {   //Change A.
+        //Change B.
+>>>>>>> 395c5a4... Change B.
+        score = score + scoreIncrease;
+        scoreText.text = score.ToString();
+    }
+}
